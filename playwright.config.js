@@ -1,6 +1,14 @@
-// @ts-check
-import { defineConfig, devices } from '@playwright/test';
+import dotenv from 'dotenv';
+import path from 'path';
 
+// @ts-check
+import {
+  defineConfig,
+  devices,
+} from '@playwright/test';
+
+// Load environment variables from .env file
+dotenv.config({ path: path.resolve(__dirname, '.env') });
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
